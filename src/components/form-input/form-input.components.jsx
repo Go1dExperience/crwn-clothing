@@ -5,9 +5,9 @@ const FormInput = ({ handleChange, label, ...rest }) => {
   return (
     <div className="group">
       <input
-        autoComplete="off"
         className="form-input"
         onChange={handleChange}
+        autoComplete="off"
         {...rest}
       />
       {label ? (
