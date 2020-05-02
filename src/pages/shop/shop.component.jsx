@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
-import SHOP_DATA from './shop.data';
+import React, { useState } from "react";
+import SHOP_DATA from "./shop.data";
 //--Import Components--------------------
-import CollectionPreview from '../../components/collection-preview/collection-preview.component';
+import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 
 function ShopPage() {
-    const [collections, setCollections] = useState(SHOP_DATA);
-    return (
-        <div className="shop-page">
-            {collections.map(({id, ...rest}) => (
-                <CollectionPreview key={id} {...rest}></CollectionPreview>
-            ))}
-        </div>
-    )
+  const [collections] = useState(SHOP_DATA);
+  return (
+    <div className="shop-page">
+      {collections.map(({ id, ...rest }) => (
+        <CollectionPreview key={id} {...rest}></CollectionPreview>
+      ))}
+    </div>
+  );
 }
 
-export default ShopPage
+export default ShopPage;
