@@ -42,7 +42,7 @@ function App({ currentUser, setCurrentUser }) {
       <Header></Header>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/shop" component={ShopPage}></Route>
+        <Route path="/shop" component={ShopPage}></Route>
         <Route exact path="/checkout" component={CheckOut}></Route>
         <Route
           exact
